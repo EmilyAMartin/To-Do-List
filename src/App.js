@@ -24,14 +24,17 @@ function App() {
     <div>
       <div className="todo-container">
         <div className="header">To-Do List</div>
-        <div className="input-container">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button onClick={() => addTodo(input)}>Add</button>
-        </div>
+      </div>
+      <div className="input-container">
+        <input
+          type="text"
+          placeholder="Add New Task"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button className="add-button" onClick={() => addTodo(input)}>
+          +
+        </button>
       </div>
       <div>
         <div className="sub-header">Tasks</div>
