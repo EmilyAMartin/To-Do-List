@@ -1,11 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 body {
-  background-color: rgb(157, 212, 194);
+  background-color: rgb(228, 228, 228);
+  font-family: "Open Sans", sans-serif;
 }
-.todo {
+.todo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: red solid 1px;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(62, 71, 194);
+}
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sub-header {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+ul {
+  line-height: 180%;
+  border: rgb(0, 0, 0) solid 1px;
+}
+.list {
+  background-color: rgb(90, 90, 90);
+  border-radius: 0.5rem;
+  border: rgb(0, 0, 0) solid 1px;
 }

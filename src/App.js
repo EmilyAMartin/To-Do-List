@@ -22,19 +22,29 @@ function App() {
   };
   return (
     <div>
-      <div className="todo">
-        <h1>To Do List</h1>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button onClick={() => addTodo(input)}>Add</button>
+      <div className="todo-container">
+        <div className="header">To-Do List</div>
+        <div className="input-container">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button onClick={() => addTodo(input)}>Add</button>
+        </div>
+      </div>
+      <div>
+        <div className="sub-header">Tasks</div>
         <ul>
           {list.map((todo) => (
             <li key={todo.id}>
               {todo.todo}
-              <button onClick={() => deleteTodo(todo.id)}>&times;</button>
+              <button
+                className="delete-button"
+                onClick={() => deleteTodo(todo.id)}
+              >
+                &times;
+              </button>
             </li>
           ))}
         </ul>
